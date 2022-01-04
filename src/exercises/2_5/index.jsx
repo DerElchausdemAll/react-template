@@ -1,5 +1,8 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/button";
+import Checkbox from "../components/checkbox";
+import List from "../components/list";
+import ListItem from "../components/list-item";
 
 /**
  * ## Reusable components
@@ -9,24 +12,23 @@ import Button from "../components/Button";
  * 4. Make a reusable List and ListItem component
  */
 
-// const buttonItems = Array.from({ length: 10 }, () => {
-// 	return console.log("Hello Button");
-// });
-
-// const Exercise = () => {
-// 	return (
-// 		<div>
-// 			{buttonItems.map((buttonItem) => {
-// 				return <Button />;
-// 			})}
-// 		</div>
-// 	);
-// };
-
 const Exercise = () => {
 	return (
 		<div>
-			<Button className={"Irgendwas"}>Click me</Button>
+			<Button className="ExtraStyling">Click me</Button>
+			<Checkbox>Hello</Checkbox>
+			<List>
+				<ListItem marker="😇">Item1</ListItem>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</List>
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
 		</div>
 	);
 };

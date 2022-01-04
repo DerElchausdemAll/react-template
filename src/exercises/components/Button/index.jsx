@@ -10,20 +10,3 @@ const Button = ({ children, className, ...props }) => {
 };
 
 export default Button;
-
-// const Button = () => {
-// 	const [visible, setVisible] = React.useState(false);
-
-// 	return (
-// 		<div className="ButtonWrapper">
-// 			<button
-// 				className="Button"
-// 				onClick={() => {
-// 					setVisible(!visible);
-// 				}}
-// 			>
-// 				{visible ? "Hide" : "Show"}
-// 			</button>
-// 		</div>
-// 	);
-// };
