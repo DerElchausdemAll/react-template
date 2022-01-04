@@ -16,7 +16,7 @@ const Exercise = () => {
 	return (
 		<div>
 			<Button className="ExtraStyling">Click me</Button>
-			<Checkbox>Hello</Checkbox>
+			<Checkbox>Hallo</Checkbox>
 			<List>
 				<ListItem marker="😇">Item1</ListItem>
 				<li>Item2</li>
