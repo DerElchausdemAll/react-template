@@ -2,6 +2,10 @@
 	width: 100px;
 	height: 50px;
 	margin: 10px;
-	border: red solid 1px;
+	border: rgb(8, 2, 2) solid 1px;
 	border-radius: 20px;
+}
+
+.Button:hover {
+	background: white;
 }

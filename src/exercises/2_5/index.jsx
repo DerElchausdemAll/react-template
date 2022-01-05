@@ -4,6 +4,10 @@ import Checkbox from "../components/checkbox";
 import List from "../components/list";
 import ListItem from "../components/list-item";
 
+//Test
+import "./style.css";
+//Test
+
 /**
  * ## Reusable components
  * 1. Make a reusable Button component
@@ -15,19 +19,22 @@ import ListItem from "../components/list-item";
 const Exercise = () => {
 	return (
 		<div>
+			<Button>Click me</Button>
 			<Button className="ExtraStyling">Click me</Button>
-			<Checkbox>Hallo</Checkbox>
+			<Checkbox> Alles kapiert?</Checkbox>
 			<List>
 				<ListItem marker="😇">Item1</ListItem>
 				<li>Item2</li>
 				<li>Item3</li>
 				<li>Item4</li>
+				<li>Item5</li>
 			</List>
 			<ul>
 				<li>Item1</li>
 				<li>Item2</li>
 				<li>Item3</li>
 				<li>Item4</li>
+				<li>Item5</li>
 			</ul>
 		</div>
 	);
