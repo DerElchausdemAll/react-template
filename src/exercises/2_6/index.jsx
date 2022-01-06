@@ -48,7 +48,7 @@ const ComponentA = (props) => {
 /**
  * This Component uses object destructuring. It only outputs the "rest"
  */
-const ComponentB = ({ foo, bar, ...rest }) => {
+const ComponentB = ({ foo, bar, bla, blub, ...rest }) => {
 	return <Code code={rest} />;
 };
 
@@ -83,12 +83,12 @@ const ComponentD = ({ color, style = {}, ...rest }) => {
  * This Component picks "color" and "background" and adds it tho the style attribute
  * The output only shows the "style" attribute
  */
-const ComponentE = (props) => {
+const ComponentE = ({ color, background, style = {}, ...rest }) => {
 	const ref = useRef(null);
 	return (
 		<div>
-			<div ref={ref} {...props}>
-				I should be {props.color} with a {props.background} background
+			<div ref={ref} style={{ ...style, color, background }}>
+				I am {color} with a {background} background
 			</div>
 			<HTMLOutput outerRef={ref} />
 		</div>
@@ -121,6 +121,12 @@ const Exercise = () => {
 			<p>All properties are passed on</p>
 			<ComponentA foo="foo" bar={`BA${"r".toUpperCase()}`} />
 			<ComponentA age={26} name={{ first: "Max", last: "Harrington" }} />
+			<ComponentA>Hello there</ComponentA>
+			<ComponentA a={1 + 2}></ComponentA>
+			<ComponentA a={undefined}></ComponentA>
+			<ComponentA a={null}></ComponentA>
+			<ComponentA a={false}></ComponentA>
+
 			<h2>ComponentB</h2>
 			<p>
 				Some properties were removed by{" "}
@@ -140,7 +146,9 @@ const Exercise = () => {
 				.
 			</p>
 			<ComponentB foo="foo" bar={`BA${"r".toUpperCase()}`} />
-			<ComponentB age={26} name={{ first: "Max", last: "Harrington" }} />
+			<ComponentB age={46} name={{ first: "Max", last: "Harrington", third: "Prince" }} />
+			<ComponentB age={46} name={{ foo: "Max", last: "Harrington", third: "Prince" }} />
+			<ComponentB age={46} foo={{ foo: "Max", last: "Harrington", third: "Prince" }} />
 			<h2>ComponentC</h2>
 			<p>All properties are passed on</p>
 			<ComponentC color="red" foo="foo" bar="bar" />
@@ -148,7 +156,7 @@ const Exercise = () => {
 			<p>Color is removed and added to style</p>
 			<ComponentD color="red" foo="foo" bar="bar" />
 			<h2>ComponentE</h2>
-			<ComponentE color="red" background="yellow" />
+			<ComponentE color="blue" background="yellow" />
 			<h2>ComponentF</h2>
 			<ComponentF
 				src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300"

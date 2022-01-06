@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/button";
 import Checkbox from "../components/checkbox";
 import List from "../components/list";
 import ListItem from "../components/list-item";
@@ -21,7 +21,13 @@ const Exercise = () => {
 		<div>
 			<Button>Click me</Button>
 			<Button className="ExtraStyling">Click me</Button>
-			<Checkbox> Alles kapiert?</Checkbox>
+			<Checkbox
+				label=""
+				onChange={(event_) => {
+					console.log(event_.target.checked);
+				}}
+			/>
+
 			<List>
 				<ListItem marker="😇">Item1</ListItem>
 				<li>Item2</li>

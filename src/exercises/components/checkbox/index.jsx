@@ -1,17 +1,29 @@
 import react from "react";
 import styles from "./styles.module.css";
 
-const Checkbox = ({ children, className, ...props }) => {
+// const Checkbox = ({ children, className, ...props }) => {
+// 	return (
+// 		<div>
+// 			<input
+// 				{...props}
+// 				className={[styles.Checkbox, className].join(" ")}
+// 				type="checkbox"
+// 				id="test"
+// 			></input>
+// 			<label for="test">{children}</label>
+// 		</div>
+// 	);
+// };
+
+// export default Checkbox;
+
+const Checkbox = ({ label, ...props }) => {
 	return (
-		<div>
-			<input
-				{...props}
-				className={[styles.Checkbox, className].join(" ")}
-				type="checkbox"
-				id="test"
-			></input>
-			<label for="test">{children}</label>
-		</div>
+		<label>
+			<div>{label}</div>
+			<input {...props} className={[styles.Input]} type="checkbox" />
+			<div className={styles.Check} />
+		</label>
 	);
 };
 
