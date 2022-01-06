@@ -1,20 +1,5 @@
 import React from "react";
-import "./style.css";
-
-/**
- * ## Card
- *  1. Create a card with an image, a headline and a description
- *  2. Add a button
- *      When the user clicks the button
- *      Then the description toggles
- *      And The button text changes
- */
-
-// <div className="hello"</div>
-// => React.createElement("div", {className: "hello"})
-
-// const myDiv = document.createElement("div")
-//myDiv.className = "hello"
+import styles from "./styles.module.css"; // geht noch nicht
 
 const Card = () => {
 	const [visible, setVisible] = React.useState(true); // [Boolean, Function]
