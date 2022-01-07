@@ -21,7 +21,7 @@ const Typography = ({
 	children,
 	className, // sammelt className aus der anderen Index-Datei
 	variant = "body1", // wenn kein Variant an <Typography> drangehängt wird, dann nimmt er body1
-	component = typeVarients[variant] ?? "span", // wenn der Variant="name" nicht existiert, dann span
+	component = typeVarients[variant] ?? "span", //wenn kein Component angegeben wird dann typeVarients[varient], wenn der Variant="name" nicht existiert, dann span
 	...rest // der Rest sammelt hier das foo="Bar" ein und in Component gibt er es wieder aus!
 }) => {
 	const Component = component;
@@ -31,7 +31,7 @@ const Typography = ({
 		</Component>
 	);
 };
-// styles.Typography erstellt eine class styles_Typography, aber warum braucht man das?
+// styles.Typography erstellt eine class styles_Typography, greift das .Typography aus der styles.module.css ab!
 export default Typography;
 
 // Stand 06.01.2022 mit Dennis, Marc etc zusammengecoded
