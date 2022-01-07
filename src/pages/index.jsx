@@ -15,6 +15,10 @@ const Home = () => {
 									<Link to={`/solutions/${page}`}>Solution</Link> )
 								</div>
 								<div>
+									<Link to={`/exercises/${page}`}>Exercise {page}</Link> (
+									<Link to={`/solutions/${page}`}>Solution</Link> )
+								</div>
+								<div>
 									<Link to={`/exercises/${page}_5`}>Exercise {page + 0.5}</Link> (
 									<Link to={`/solutions/${page}_5`}>Solution</Link> )
 								</div>

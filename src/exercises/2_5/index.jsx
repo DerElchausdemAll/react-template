@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/button";
+import Button from "../components/Button";
 import Checkbox from "../components/checkbox";
 import List from "../components/list";
 import ListItem from "../components/list-item";
@@ -20,7 +20,7 @@ import "./style.css";
 const Exercise = () => {
 	return (
 		<div>
-			<Typography variant="h1">h1</Typography>
+			<Typography variant="h1">Eine coole Überschrift</Typography>
 			<Typography className="irgendwas hallo" foo="Bar" variant="h2" component="h1">
 				h1, gestylt als h2 (SEO zuliebe)
 			</Typography>
