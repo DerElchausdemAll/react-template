@@ -34,3 +34,15 @@ const Exercises = () => {
 };
 
 export default Exercises;
+
+// const Exercises = () => {
+// 	const { page } = useParams();
+// 	switch (page) {
+// 		case "1":
+// 			return <Exercise1 />;
+// 		case "2":
+// 			return <Exercise2 />;
+// 			default:
+// 				return <div>Not Found</div>;
+// 		}
+// 	};

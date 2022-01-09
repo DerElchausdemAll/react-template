@@ -1,21 +1,18 @@
 import React from "react";
-import Typography from "../exercises/components/typography";
-import Button from "../exercises/components/Button";
-import Header from "../exercises/components/header";
-import Footer from "../exercises/components/footer";
-
-const Layout = ({ children }) => {
-	return (
-		<div>
-			<Header />
-			<div>{children}</div>
-			<Footer />
-		</div>
-	);
-};
+import Layout from "../exercises/components/Layout";
+// import Typography from "../exercises/components/typography";
+// import Button from "../exercises/components/Button";
+// import Header from "../exercises/components/header";
+// import Footer from "../exercises/components/footer";
+import Counter from "../exercises/components/Counter";
 
 const Portfolio = () => {
-	return <Layout>Home</Layout>;
+	return (
+		<div>
+			<Layout>Home</Layout>
+			<Counter>Test</Counter>
+		</div>
+	);
 };
 
 export default Portfolio;
