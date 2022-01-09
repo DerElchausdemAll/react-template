@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const Footer = ({ children, className, ...props }) => {
+const Footer = ({ children, ...props }) => {
 	return (
-		<footer {...props} className={[styles.Footer, className].join(" ")}>
-			<div>Hier stehen nette Worte zum Abschluss</div>
+		<footer {...props} className={styles.Footer}>
+			<div>Footer</div>
 		</footer>
 	);
 };

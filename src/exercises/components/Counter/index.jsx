@@ -1,28 +1,45 @@
 import React, { useState } from "react";
+import Typography from "../typography";
 
-const Counter = () => {
+const Counter = ({ ...props }) => {
 	const [count, setCount] = useState(0);
 	const [theme, setTheme] = useState("blue");
-	// count = currentState , function that allows to update
+	// count = currentState , setTheme function that allows to update
 
-	function decrementCount() {
+	const decrementCount = () => {
 		setCount((prevCount) => prevCount - 1);
-		setTheme("blue");
-		// setTheme(("blue") => count < 0);
-	}
+		// setTheme("blue");
+		setTheme(() => {
+			if (count === 1) {
+				return setTheme("blue");
+			} else if (count <= 0) {
+				return setTheme("red");
+			} else {
+				return setTheme("green");
+			}
+		});
+	};
 
-	function incrementCount() {
+	const incrementCount = () => {
 		setCount((prevCount) => prevCount + 1);
-		setTheme("red");
-	}
+		// setTheme("blue");
+		setTheme(() => {
+			if (count === -1) {
+				return setTheme("blue");
+			} else if (count >= 0) {
+				return setTheme("green");
+			} else {
+				return setTheme("red");
+			}
+		});
+	};
 
 	return (
-		<>
+		<Typography {...props} variant="h3">
 			<button onClick={decrementCount}>-</button>
 			<span style={{ color: theme }}>{count}</span>
-			<span>{theme}</span>
 			<button onClick={incrementCount}>+</button>
-		</>
+		</Typography>
 	);
 };
 
