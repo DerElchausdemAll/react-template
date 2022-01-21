@@ -36,6 +36,7 @@ const Home = () => {
 						</div>
 					);
 				})}
+				<Link to={`/portfolio`}>Portfolio</Link>
 			</nav>
 		</div>
 	);
